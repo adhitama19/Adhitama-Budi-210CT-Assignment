@@ -27,3 +27,19 @@ matrix_c = [[2, 3],
 
 
 print(matrix_Addition(matrix_b, matrix_c))
+
+"""or this
+
+list_a = [1, 2,
+          3, 4]
+
+list_b = [1, 2,
+          3, 4]
+
+answer = [ ]
+
+for a, b in zip(list_a, list_b):
+    count = a + b
+    answer.append(count)
+
+print (answer)"""
