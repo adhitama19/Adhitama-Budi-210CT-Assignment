@@ -1,45 +1,26 @@
-def matrix_Addition (b, c):
+""" This solution is to solve the addition, subtraction, and multiplication of two matrices.
+New functions will be defined where each addition, multiplication, and division will be calculated
+separately."""
 
 
-    result = [[0,0],
-              [0,0],
-              [0,0]]
+def function_add(b, c):
+    addition = b, c
+    return addition
 
-    
+def function_multiply(function_add):
+    multiply = 2 * (function_add)
+    return multiply
 
-    for row in range(len(b)):
-        for column in range (len(c)):
-            result [row][column] = b[row][column] + c[row][column]
+def function_Newtiply(b, c):
+    multiply = b * c
+    return multiply
 
-    for r in result:
-        print (result)
+def result_A (function_multiply, function_newtiply):
 
+    result = function_Newtiply - function_multiply
     return result
 
-
-matrix_b = [[12, 14],
-            [15, 2],
-            [3, 7]]
-
-matrix_c = [[2, 3],
-            [5, 13],
-            [2, 7]]
-
-
-print(matrix_Addition(matrix_b, matrix_c))
-
-"""or this
-
-list_a = [1, 2,
-          3, 4]
-
-list_b = [1, 2,
-          3, 4]
-
-answer = [ ]
-
-for a, b in zip(list_a, list_b):
-    count = a + b
-    answer.append(count)
-
-print (answer)"""
+print (function_add(3, 2))
+print (function_multiply(function_add))
+print (function_Newtiply(3, 2))
+print (result_A (function_multiply, function_newtiply))
