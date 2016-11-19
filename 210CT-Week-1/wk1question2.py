@@ -19,7 +19,7 @@ def count_factorial(n):
                 break
                 
 
-    return result, trail_zeros
+    return ("The factorial for this value is: %d, and the trailing zero's for this value is: %d" % (result, trail_zeros))
 
 
     
