@@ -1,26 +1,23 @@
 from math import sqrt
 
-def perfect_square(n):
-    answer = 0
-    number_int = int(n)
-    
+def fact_number(number):
 
-    
+    perfect_square = []
+    yang_disamain = []
+    n_int = int(number)
 
-    math_Count = (sqrt(number_int)) * (sqrt(number_int))
-    square_root = sqrt(number_int)
-    
-    if math_Count == number_int:
 
-        answer = square_root
-        print ("This is a factorial number")
-        print ("The root for your input value is: %d" % square_root)
+    for i in range (1, number):
+            new_val = i * i
+            perfect_square.append(new_val)
+
+    if number in perfect_square:
+        return sqrt(number)
 
     else:
-        print ("Sorry that number is not a perfect square")
+        final_val = perfect_square[-1]
+        final_Ans = sqrt(final_val)
+        return sqrt(final_Ans)
 
-    return answer
 
-  
-
-print (perfect_square(205205625))
+print (fact_number(36))
