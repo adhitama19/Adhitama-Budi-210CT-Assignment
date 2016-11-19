@@ -7,8 +7,8 @@ def fact_number(number):
     n_int = int(number)
 
 
-    for i in range (1, number):
-            new_val = i * i
+    for i in range (1, number-1):
+            new_val = int(i * i)
             perfect_square.append(new_val)
 
     if number in perfect_square:
@@ -17,7 +17,7 @@ def fact_number(number):
     else:
         final_val = perfect_square[-1]
         final_Ans = sqrt(final_val)
-        return sqrt(final_Ans)
+        return int(sqrt(final_Ans))
 
 
-print (fact_number(36))
+print (fact_number(20))
