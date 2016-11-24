@@ -1,25 +1,33 @@
-def count_factorial(n):
+""" This is the solution for week 1 question 2. The question ask us to count the number of trailing zero's in
+    a factorial number. First of all i defined my function as count_factorial with n as the parameter. this
+    function will output the value of the factorial and count the trailing zero's of that value."""
 
-    factorial_list = []
-    trail_zeros = 0
-    result = 1
 
-    for i in range (1, n+1):
-        factorial_list.append(i)
 
-    for x in factorial_list:
-        result *= x
 
-    for y in factorial_list:
-        while y > 0:
-            if y % 5 == 0:
-                trail_zeros = trail_zeros + 1
-                y = y/5
-            else:
-                break
+def count_factorial(n): # count_factorial function is defined with n as the parameters
+
+    factorial_list = [] # empty list which will have a value range from 1 to n
+    total_zeros = 0     # conditions which will be used to count how many trail zero's
+    result = 1          # conditions to count the factorial of the n value
+
+    for i in range (1, n+1):      # a for loop that will go through from range 1 to n value
+        factorial_list.append(i)  # the i value will be appended to the factorial_list empt list
+
+    for val in factorial_list:    # a for loop that will go through appended factorial list
+        result *= val             # conditions update results by multiplying results with val
+
+    for val in factorial_list:    # a for loop that will go through factorial_list to count the trail zero's
+        while val > 0:            # a while loop to check if val is bigger than zero
+            if val % 5 == 0:      # conditional statements to check if the remainder of the divisions is zero
+                total_zeros = total_zeros + 1  # the condition to update total_zeroes if the divisions remainder is equal to zero
+                val = val/5                    
+    
+            else:                 # else statement if the remainders conditions is not true
+                break             # break statement to terminates the loop if the remainder is not zero 
                 
 
-    return ("The factorial for this value is: %d, and the trailing zero's for this value is: %d" % (result, trail_zeros))
+    return ("The factorial for this value is: %d, and the trailing zero's for this value is: %d" % (result, total_zeros))  # The returned result
 
 
     
