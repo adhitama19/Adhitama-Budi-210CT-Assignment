@@ -7,13 +7,13 @@
 from random import randrange  # This will import randrange function, which will shuffles number within range specified
 
 
-def shuffle_number(numbers): # A new function is defined with shuffle_number as name, and numbers as the parameter
+def shuffle_number(list_number): # A new function is defined with shuffle_number as name, and numbers as the parameter
     
     new_list = []
     
-    for x in numbers:   # for loop is made which will go through all value in empty_lst.
+    for x in list_number:   # for loop is made which will go through all value in empty_lst.
         
-        random_index = randrange(0, len(new_list)+1) # using the built-in function randrange. This will give random_index a random value to shuffle numbers from its index
+        random_index = randrange(0, len(list_number)-1) # using the built-in function randrange. This will give random_index a random value to shuffle numbers from its index
         new_list.insert(random_index, x) # This is the important line to shuffle the numbers. the object (x) will be inserted in a random index.
 
     return new_list #returns the empty_lst with new shuffled arrays
