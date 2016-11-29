@@ -1,4 +1,4 @@
-list_one = [1, 2, 3, 4, 5, 1, 2, 3, 2, 3, 5]
+list_one = [1, 2, 3, 4, 5, 1, 2, 3, 2, 3, 5, 0, 4, 5, 7, 8, 10, 12, 13, 14, 15, 20]
 
 
 def split_substring(split_list):
@@ -22,8 +22,6 @@ def split_substring(split_list):
     
     print ("There are %d sub-list found from this list" % count_sublist)
     print ("The maximum substring in this set of list is: %s" % maximum_sublist)
-    return sub_list
     
 
-
-print(split_substring(list_one))
+split_substring(list_one)
