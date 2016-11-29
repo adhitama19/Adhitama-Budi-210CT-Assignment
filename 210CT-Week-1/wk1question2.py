@@ -5,13 +5,13 @@
 
 
 
-def count_factorial(n): # count_factorial function is defined with n as the parameters
+def count_factorial(number): # count_factorial function is defined with n as the parameters
 
     factorial_list = [] # empty list which will have a value range from 1 to n
     total_zeros = 0     # conditions which will be used to count how many trail zero's
     result = 1          # conditions to count the factorial of the n value
 
-    for i in range (1, n+1):      # a for loop that will go through from range 1 to n value
+    for i in range (1, number+1):      # a for loop that will go through from range 1 to n value
         factorial_list.append(i)  # the i value will be appended to the factorial_list empt list
 
     for val in factorial_list:    # a for loop that will go through appended factorial list
@@ -24,14 +24,20 @@ def count_factorial(n): # count_factorial function is defined with n as the para
                 val = val/5                    
     
             else:                 # else statement if the remainders conditions is not true
-                break             # break statement to terminates the loop if the remainder is not zero 
-                
+                break             # break statement to terminates the loop if the remainder is not zero
 
-    return ("The factorial for this value is: %d, and the trailing zero's for this value is: %d" % (result, total_zeros))  # The returned result
+
+    if number < 20:
+        print ("The factorial for this value is: %d" % (result))
+        print ("and the trailing zero's for this value is: %d" % (total_zeros))
+        
+
+    else:
+        print (total_zeros)
 
 
     
 
     
         
-print(count_factorial(5))
+count_factorial(15)
