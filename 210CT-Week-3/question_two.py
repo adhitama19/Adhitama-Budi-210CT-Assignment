@@ -11,11 +11,11 @@ def recursive_prime (div, number): # new function is defined as recursive_prime.
     else:                        # another conditional statement
         while div < number:        # a while loop that will be executed if div is lower than number
 
-            if (number % div) == 0: # nested conditional statement that checks if there is no reminder
-                return False        # If there are no remainders it is not a prime number
+            if (number % div) == 0: 
+                return False        
 
             else:
-                return recursive_prime (div + 1, number) # div + 1 is the base case that will keep on increasing until it is more than number
+                return recursive_prime (div + 1, number) 
 
         return True # if there are no remainders it is returned as true.
 
