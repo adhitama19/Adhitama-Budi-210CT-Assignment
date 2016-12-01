@@ -11,7 +11,7 @@ def shuffle_number(list_number):
 
     for x in list_number:                                   # (n)
 
-        random_index = randrange(0, len(list_number)-1)     # (n)
+        random_index = randrange(0, len(list_number))     # (n)
         new_list.insert(random_index, x)                    # (n)
 
     return new_list                                         # (1)
@@ -28,35 +28,38 @@ print(shuffle_number(n))
 #Question 2
 def count_factorial(number): #
 
+    numberInt = int(number)
     factorial_list = []                                                             # (1) 
     total_zeros = 0                                                                 # (1)    
     result = 1                                                                      # (1)         
 
-    for i in range (1, number+1):                                                   # (n)     
+    for num in range (1, number+1):                                                   # (n)     
         factorial_list.append(i)                                                    # (n)  
 
-    for val in factorial_list:                                                      # (n)    
-        result *= val                                                               # (n)            
+    for elm in factorial_list:                                                      # (n)    
+        result *= elm                                                               # (n)            
 
-    for val in factorial_list:                                                      # (n)   
-        while val > 0:                                                              # (n * n)            
-            if val % 5 == 0:                                                        # (n * n)     
+    for elm in factorial_list:                                                      # (n)   
+        while elm > 0:                                                              # (n * n)            
+            if elm % 5 == 0:                                                        # (n * n)     
                 total_zeros = total_zeros + 1                                       # (n * n)  
-                val = val/5                                                         # (n * n)                  
+                elm = elm/5                                                         # (n * n)                  
     
             else:                                                                   # (n * n)                 
                 break                                                               # (n * n)             
 
 
     if number < 20:                                                                 # (1)
-        print ("The factorial for this value is: %d" % (result))                    # (1)
-        print ("and the trailing zero's for this value is: %d" % (total_zeros))     # (1)
+        statement_less =  ("The factorial for this value is: %d \nand the trailing zero's for this value is: %d" % (result, total_zeros))   # (1)                   # (1)
+        return (statement_less)                                                     # (1)
         
 
-    else:                                                                           # (1)
-        print (total_zeros)                                                         # (1)
-        
+    else:                                                                                # (1)
+        statement_more = ("The trailing zero's for this value is: %d" % (total_zeros))   # (1)
+        return (statement_more)                                                          # (1)
+    
+    return    
 
-# Big O Notation = O ((n * n) + (n * n) + (n * n) + (n * n) + (n * n) + (n * n) + n + n + n + n + n + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1)
-# Big O Notation = O (6n ^ 2 + 5n + 8)
+# Big O Notation = O ((n * n) + (n * n) + (n * n) + (n * n) + (n * n) + (n * n) + n + n + n + n + n + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1)
+# Big O Notation = O (6n ^ 2 + 5n + 9)
 # Therefore the 0 Notation = O (n ^ 2)
