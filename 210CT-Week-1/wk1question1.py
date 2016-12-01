@@ -18,7 +18,7 @@ def shuffle_number(list_number):
     
     for x in list_number:                                   # for loop to go through each element in list_number.
         
-        random_index = randrange(0, len(list_number)-1)     # using randrange to give random index 
+        random_index = randrange(0, len(list_number))       # using randrange to give random index 
         new_list.insert(random_index, x)                    # value x will be inserted to new_list with random index specified
 
     return new_list 
