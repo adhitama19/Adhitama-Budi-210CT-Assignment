@@ -1,28 +1,58 @@
-""" This is the week 1 question 1 solution. The question ask us to write a function that shuffles an array
-    of integers and should explain the rationale behind its implementation. For this question the function
-    will be named shuffle_number and the parameter will be named numbers. 
-    
-    The output will return a random shuffled elements
-    Input: [1, 2, 3, 4, 5]
-    Potential output: [1, 4, 2, 3, 5] 
+""" This is the solution for week 1 question 2. The question ask us to count the number of trailing zero's in
+    a factorial number. I begin by counting the factorial then continued with the trailing zero's.
 
+    The code input will be an integer, and the output will be the factorial and trailing zero's of the value.
+
+    Input: 5
+    Output: The factorial for this value is: 120, and the trailing zeros for this value is: 1
+
+    Input: 21
+    Output: The trailing zeros for this value is: 4
+
+    
 """
- 
-
-from random import randrange                                # Import random range
 
 
-def shuffle_number(list_number): 
+
+
+def count_factorial(number): 
+
+    numberInt = int(number)
+    factorial_list = [] 
+    total_zeros = 0     
+    result = 1          
+
+    for num in range (1, numberInt+1):      
+        factorial_list.append(num)              # the range from 1 to number appended to empty list  
+
+    for elm in factorial_list:    
+        result *= elm                           # do multiplication for each element           
+
+    for elm in factorial_list:    
+        while elm > 0:            
+            if elm % 5 == 0:      
+                total_zeros = total_zeros + 1  
+                elm = elm/5                     # to stop while, when "if" condition true                    
     
-    new_list = []
+            else:                 
+                break                           # to stop infinity loop when "if" is not true            
+
+
+    if number < 20:                             # to return the factorial of a number if less than 20
+        statement_less = ("The factorial for this value is: %d \nand the trailing zeros for this value is: %d" % (result,total_zeros ))
+        return (statement_less)
+
+    else:                                       # to return only the trailing zeros if input is more than 20
+        statement_more = ("The trailing zero's for this value is: %d" % (total_zeros))
+        return (statement_more)
+
+    return 
+
+
+
+
     
-    for x in list_number:                                   # for loop to go through each element in list_number.
+
+    
         
-        random_index = randrange(0, len(list_number))       # using randrange to give random index 
-        new_list.insert(random_index, x)                    # value x will be inserted to new_list with random index specified
-
-    return new_list 
-
-n = [5, 4, 2, 3, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
-
-print(shuffle_number(n))
+print(count_factorial(21))
