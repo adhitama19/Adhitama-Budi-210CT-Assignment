@@ -21,8 +21,8 @@ n = [5, 4, 2, 3, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
 print(shuffle_number(n))
 
 
-# Big O Notation = n + n + n + 1 + 1
-# Big O Notation = 3n + 2
+# Big O Notation = O (n + n + n + 1 + 1)
+# Big O Notation = O (3n + 2)
 # Therefore the O notation = O(n)
 
 #Question 2
@@ -57,6 +57,6 @@ def count_factorial(number): #
         print (total_zeros)                                                         # (1)
         
 
-# Big O Notation = (n * n) + (n * n) + (n * n) + (n * n) + (n * n) + (n * n) + n + n + n + n + n + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
-# Big O Notation = 6n ^ 2 + 5n + 8
+# Big O Notation = O ((n * n) + (n * n) + (n * n) + (n * n) + (n * n) + (n * n) + n + n + n + n + n + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1)
+# Big O Notation = O (6n ^ 2 + 5n + 8)
 # Therefore the 0 Notation = O (n ^ 2)
