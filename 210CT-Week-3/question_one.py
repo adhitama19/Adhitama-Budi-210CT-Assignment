@@ -1,44 +1,65 @@
 """ This is the week 3 task 1 solutions. It ask as to reversed a sentence. """
 
 
-user_input = input("Please enter a sentence: ")         # (1)
+#CODE:
 
-list_append = []
+def reverse_sent(usr_input):
 
-lower_word = user_input.lower()                         # (1)
-sentence_new = lower_word                               # (1)
+    inputStr = usr_input                                             # (1)
 
-first_sentence = sentence_new.split()                   # (1)
+    list_append = []                                                 # (1)
 
-for word in first_sentence:                             # (n)
-    list_append.append(word)                            # (n)
+    lower_word = inputStr.lower()                                    # (1)
+    sentence_new = lower_word                                        # (1)
 
-final_sentence = list_append[::-1]                      # (1)
+    first_sentence = sentence_new.split()                            # (1)
 
-combine_sentence = " ".join(final_sentence)                      # (1)
-print(combine_sentence)                                          # (1)
+    for word in first_sentence:                                     # (n)
+        list_append.append(word)                                     # (n)
 
-# Big O Notation = 2n + 7
+    final_sentence = list_append[::-1]                               # (1)
+
+    combine_sentence = " ".join(final_sentence)                      # (1)
+    return (combine_sentence)                              # (1)
+
+user_input = input("Please enter a sentence: ")                      # (1)
+
+func_call = reverse_sent(user_input)
+print(func_call)
+
+# Big O Notation = O (2n + 9)
+
 # Therefore the Big O = O(n)
 
+
 """
+
 PSEUDOCODE:
 
-user_input <- user input a sentence
+REVERSE_SENT(USR_INPUT)
 
-list_append <- empty list
+    inputStr <- USR_INPUT
 
-lower_word <- make all input lower case
-sentence_new <- new variable for lower_word
+    list_append <- empty list
 
-first_sentence <- split the sentence new into list
+    lower_word <- make all input lower case
+    sentence_new <- new variable for lower_word
 
-for word <- FIRST_SENTENCE[0] to FIRST_SENTENCE[end]
-    append word to list_append
+    first_sentence <- split the sentence_new into list
 
-final_sentence = reverse the list_append
+    for word <- FIRST_SENTENCE[0] to FIRST_SENTENCE[end]
+        append word to list_append
 
-combine_sentence <- join the final_sentence into string
-print combine sentence // Output
+    final_sentence = reverse the list_append
+
+    combine_sentence <- join the final_sentence into string
+
+    return combine sentence // Output
+    
+user_input <- input("Please enter a sentence: ")
+func_call <- reverse_sent (user_input)
+
+print(func_call)
+
 
 """
