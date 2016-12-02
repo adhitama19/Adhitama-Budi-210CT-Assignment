@@ -3,25 +3,26 @@ list_one = [1, 2, 3, 4, 5, 1, 2, 3, 2, 3, 5, 0, 4, 5, 7, 8, 10, 12, 13, 14, 15, 
 
 def split_substring(split_list):
 
-    first_elm = split_list[0]
-    sub_list = [[first_elm]]
+    first_elm = split_list[0]               # set the first element for comparison
+    sub_list = [[first_elm]]                # set list inside list
 
-    for elm in split_list[1:]:
-        if elm > first_elm:
-            first_elm = elm
-            sub_list[-1].append(elm)
-            
+    for elm in split_list[1:]:              # loop list starting from index 1
+        if elm > first_elm:                 # compare if the element is bigger than first
+            first_elm = elm                 # set the first_elm to current elm
+            sub_list[-1].append(elm)        # append item to the last sub_list
+
 
         else:
             first_elm = elm
-            sub_list.append([first_elm])
+            sub_list.append([first_elm])    # creates new list inside sub_list list
 
-    maximum_sublist = max(sub_list, key = len)
-    count_sublist = len(sub_list)
+    maximum_sublist = max(sub_list, key = len)  # sort the longest length in sub_list
+    count_sublist = len(sub_list)               # count number of sublist created
 
-    
-    print ("There are %d sub-list found from this list" % count_sublist)
-    print ("The maximum substring in this set of list is: %s" % maximum_sublist)
-    
 
-split_substring(list_one)
+    statement =  ("There are %d sub-list found from this list \nThe maximum substring in this set of list is: %s" % (count_sublist, maximum_sublist))
+
+    return statement
+
+
+print(split_substring(list_one))
