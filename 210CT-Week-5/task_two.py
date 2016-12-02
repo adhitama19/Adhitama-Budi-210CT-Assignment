@@ -1,3 +1,11 @@
+"""
+This is coursework solution for question number 11. This asks us to implement doubly linked list delete node
+function. The template has been given, and the remove_node is added.
+
+"""
+
+
+
 class Node(object):
 
     def __init__(self, value):
