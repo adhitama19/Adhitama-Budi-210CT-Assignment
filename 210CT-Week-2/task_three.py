@@ -3,7 +3,7 @@ New functions will be defined where each addition, multiplication, and division 
 separately."""
 
 
-ADD_MATRIX (MAT_A, MAT_B)
+"""ADD_MATRIX (MAT_A, MAT_B)
 
     fin_result <- matrix list       // the list should be list inside list          (1)
 
@@ -81,3 +81,4 @@ set_two = output of MATRIX_ADDITION (MATRIX_ONE, MATRIX_TWO)	  // MATRIX_A + MAT
 set_three = output of SINGLE_MULTIPLICATION (2, A)		 // VALUE * (MATRIX_A + MATRIX_B)
 final_set = output of MATRIX_SUBTRACTION (a, c)                  // set_one – set_three
 
+"""
