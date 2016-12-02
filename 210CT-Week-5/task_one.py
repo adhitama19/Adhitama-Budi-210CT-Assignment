@@ -1,3 +1,12 @@
+"""
+This is the coursework question 10 solutions. Where it asks us to create a sublist from a list.
+The sublist should extract the sub-sequence of maximum length in an ascending order.
+
+Input = [1, 2, 3, 4, 1, 2, 3, 1, 2]
+Output = [1, 2, 3, 4]
+
+"""
+
 list_one = [1, 2, 3, 4, 5, 1, 2, 3, 2, 3, 5, 0, 4, 5, 7, 8, 10, 12, 13, 14, 15, 20]
 
 
