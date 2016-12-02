@@ -15,7 +15,7 @@ def recursive_prime (div, number):
                 return False
 
             else:
-                return recursive_prime (div + 1, number)
+                return recursive_prime (div + 1, number) # keep adding div to reach base case
 
         return True
 
