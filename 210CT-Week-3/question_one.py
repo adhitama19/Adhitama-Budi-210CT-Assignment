@@ -1,4 +1,9 @@
-""" This is the week 3 task 1 solutions. It ask as to reversed a sentence. """
+""" This is the week 3 task 1 solutions. It ask us to reverse a sentence.
+
+    input = This is awesome
+    output = awesome is this
+
+"""
 
 
 #CODE:
